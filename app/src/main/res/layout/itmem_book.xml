@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/custom_item_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+
+    <ImageView
+
+        android:id="@+id/imgBook"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="1dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/author"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="@dimen/dimen5"
+        android:maxLines="2"
+        android:text="name:"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text16"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imgBook"
+        app:layout_constraintBottom_toTopOf="@id/author" />
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen5"
+        android:text="author:"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text14"
+        android:textStyle="italic|bold"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/imgBook"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.491"
+        app:layout_goneMarginLeft="@dimen/dimen5" />
+
+    <TextView
+        android:id="@+id/url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="@dimen/dimen5"
+        android:text="url: "
+        android:textColor="@color/colorTextUrl"
+        app:layout_constrainedWidth="true"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/imgBook"
+        app:layout_constraintTop_toBottomOf="@+id/author" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
